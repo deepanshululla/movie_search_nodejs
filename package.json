@@ -9,6 +9,13 @@
   },
   "author": "",
   "license": "ISC",
+  "repository":{
+    "type":"git",
+    "url":"https://github.com/deepanshululla/imdb_clone_nodejs"
+  },
+  "engines":{
+    "node": "6.11.2"
+  }
   "dependencies": {
     "body-parser": "^1.18.0",
     "ejs": "^2.5.7",

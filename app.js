@@ -72,8 +72,8 @@ app.get("/results", function(req, res){
 
 
 // Starting listener
-app.set('port', process.env.PORT || 3000);
-app.set('ip', process.env.IP || "127.0.0.1");
+app.set('port', process.env.PORT || 5000);
+//app.set('ip', process.env.IP || "127.0.0.1");
 app.listen(app.get('port'),app.get('ip'), function(){
-    console.log('Server up: http://' + app.get('ip') +":"+ app.get('port'));
+    console.log('Server up');
 });

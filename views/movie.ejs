@@ -1,0 +1,34 @@
+<% include partials/header %>
+
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    
+    <% if (typeof data !== "undefined") { %>
+        <div class="row flex">
+            <div class="col-lg-4 col-sm-6">
+                <div class="thumbnail img-responsive">
+                    <img src= "<%= data["Poster"] %>" >
+                </div>
+            </div>
+            <div class="col-lg-8 col-sm-6">
+                <div class="movie_data">
+                    <h3> <%= data["Title"] %> </h3>
+                   <p> <strong> Title: </strong> <%= data["Runtime"] %> </p>
+                   <p> <strong> Genre: </strong><%= data["Genre"] %> </p>
+                   <p> <strong> IMDB Rating: </strong><%= data["imdbRating"] %> </p>
+                   <p> <strong> IMDB Votes: </strong> <%= data["imdbVotes"] %> </p>
+                   <p><strong> Cast: </strong> <%= data["Actors"] %> </p>
+                   <p><strong> Plot: </strong> <%= data["Plot"] %> </p>
+                </div>
+               
+            </div>
+        </div>
+        <% } else { %>
+            <h3>Hmm...I'm not familiar with that movie. Try another title!</h3>
+        <% } %>
+</div>
+
+<% include partials/footer %>

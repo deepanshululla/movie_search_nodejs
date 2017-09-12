@@ -1,0 +1,51 @@
+<% include partials/header %>
+
+
+<div class="container">
+    <div class="jumbotron">
+        <form class="form-inline" action="/results" method="GET" align="center">
+            <div class="form-group">
+                <label for="search">Movie Name:</label>
+                <input type="text" class="form-control" id="search" name="search" placeholder=<%= query.split(' ').join('+').toLowerCase() %>>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+<div class="container" class="search_results">
+    <% if (typeof data["Search"] !== "undefined") { %>
+        <div class="row flex">
+        <% data["Search"].forEach(function(movie){ %>
+            
+                <div class="col-lg-4 col-sm-6">
+                    <div class="thumbnail img-responsive">
+                        <a href="/movie/<%= movie["imdbID"] %>"> <img src="<%= movie["Poster"] %>" class="searched_images">
+                        <div class="caption" align="center">
+                            <p><%= movie["Title"] %></p>
+                        </div></a>
+                       
+                        
+                    </div>
+                    
+                </div>
+            
+            
+            
+            <!--<div>-->
+            <!--    <h2> <%= movie["Title"] %> </h2>-->
+            <!--    <img src=<%= movie["Poster"] %>  class="poster-images"></img>-->
+            <!--    <p> Release year: <%= movie["Year"] %> </p>-->
+            <!--</div>-->
+           
+        <% }); %>
+        </div>
+    <% } else { %>
+            <h2>Hmm...I'm not familiar with that movie. Try another title!</h2>
+    <% } %>
+</div>
+
+
+
+<% include partials/footer %>

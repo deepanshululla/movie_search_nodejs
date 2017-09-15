@@ -12,9 +12,6 @@ function get_request_results_page(host, qs, res){
     var url=host+qs;
     var query=qs.substr(2, qs.length-1);
     // console.log(query);
-    console.log(query);
-    console.log(qs);
-    console.log(qs.length);
     console.log("GET",url);
   
     request(url, function(error, response, body) {
@@ -22,6 +19,8 @@ function get_request_results_page(host, qs, res){
                 var data= JSON.parse(body);
                 data = data || {};
                 res.render("results",{data:data, query:query});
+            } else {
+                res.render("error");
             }
     });
 }
@@ -38,6 +37,8 @@ function get_request_movie_page(host, qs, res){
                 var data= JSON.parse(body);
                 data = data || {};
                 res.render("movie",{data:data, query:query+""});
+            } else {
+                res.render("error");
             }
     });
 }

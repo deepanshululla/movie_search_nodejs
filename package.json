@@ -4,19 +4,20 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start":"app.js"
+    "start": "app.js"
   },
   "author": "",
   "license": "ISC",
-  "repository":{
-    "type":"git",
-    "url":"https://github.com/deepanshululla/imdb_clone_nodejs"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deepanshululla/imdb_clone_nodejs"
   },
-  "engines":{
+  "engines": {
     "node": "6.11.2"
   },
   "dependencies": {
     "body-parser": "^1.18.0",
+    "connect-timeout": "^1.9.0",
     "ejs": "^2.5.7",
     "express": "^4.15.4",
     "request": "^2.81.0"

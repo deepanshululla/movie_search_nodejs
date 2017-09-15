@@ -49,3 +49,7 @@ input:focus {
     background-color: #fceaff;
     padding: 2%;
 }
+.error-msg {
+    text-align: center;
+    color:white;
+}

@@ -1,9 +1,17 @@
 <% include partials/header %>
 
-<br>
-<br>
-<br>
-<br>
+<div class="container">
+    <div class="jumbotron">
+        <form class="form-inline" action="/results" method="GET" align="center">
+            <div class="form-group">
+                <label for="search">Movie Name:</label>
+                <input type="text" class="form-control" id="search" name="search">
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
 <div class="container">
     
     <% if (typeof data !== "undefined") { %>
@@ -27,7 +35,7 @@
             </div>
         </div>
         <% } else { %>
-            <h3>Hmm...I'm not familiar with that movie. Try another title!</h3>
+            <h3 class="error-msg"> This is embarassing. We can't find what you are searching for.Try another title!</h3>
         <% } %>
 </div>
 

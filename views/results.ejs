@@ -30,19 +30,11 @@
                     </div>
                     
                 </div>
-            
-            
-            
-            <!--<div>-->
-            <!--    <h2> <%= movie["Title"] %> </h2>-->
-            <!--    <img src=<%= movie["Poster"] %>  class="poster-images"></img>-->
-            <!--    <p> Release year: <%= movie["Year"] %> </p>-->
-            <!--</div>-->
            
         <% }); %>
         </div>
     <% } else { %>
-            <h2>Hmm...I'm not familiar with that movie. Try another title!</h2>
+            <h3 class="error-msg">This is embarassing. We can't find what you are searching for.Try another title!!</h2>
     <% } %>
 </div>
 

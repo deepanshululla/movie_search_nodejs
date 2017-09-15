@@ -1,21 +1,11 @@
 <% include partials/header %>
+<% include partials/search_form %>
 
 
-<div class="container">
-    <div class="jumbotron">
-        <form class="form-inline" action="/results" method="GET" align="center">
-            <div class="form-group">
-                <label for="search">Movie Name:</label>
-                <input type="text" class="form-control" id="search" name="search">
-            </div>
-            
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-    </div>
     <div class="container">
         <h3 class="error-msg">This is embarassing. We can't find what you are searching for.Try another title!.</h3>
     </div>
-</div>
+
 
 
 <% include partials/footer %>

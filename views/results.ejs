@@ -1,18 +1,7 @@
 <% include partials/header %>
 
 
-<div class="container">
-    <div class="jumbotron">
-        <form class="form-inline" action="/results" method="GET" align="center">
-            <div class="form-group">
-                <label for="search">Movie Name:</label>
-                <input type="text" class="form-control" id="search" name="search" placeholder=<%= query.split(' ').join('+').toLowerCase() %>>
-            </div>
-            
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-    </div>
-</div>
+<% include partials/search_form %>
 
 <div class="container" class="search_results">
     <% if (typeof data["Search"] !== "undefined") { %>
